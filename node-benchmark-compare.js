@@ -14,7 +14,7 @@ if (process.argv.length !== 3) {
 const rawData = readFileSync(process.argv[2], 'utf8')
   .split('\n')
   .filter((line) => line.trim() !== '')
-  .map((line) => JSON.parse(`[${line}]`));
+  .map((line) => JSON.parse(`[${line.replace(/\n/g, '\\n').replace(/\r/, '\\r')}]`));
 
 // Transform the data into objects.
 const [headers] = rawData;
