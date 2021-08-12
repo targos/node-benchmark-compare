@@ -10,33 +10,64 @@ if (process.argv.length !== 3) {
   process.exit(1);
 }
 
-function parseCsvLine(data) {
-  let state = 0;
+const State = {
+  NONE: 0,
+  QUOTES: 1,
+  NUMBER: 2,
+}
+
+function parseCsvLine(data, row) {
+  let state = State.NONE;
   let escaped = false;
   let tmp = '';
   const items = [];
 
+  let i = 0;
   for (const char of data) {
-    if (char === '\\' && (escaped = !escaped)) continue;
+    if (
+      (state !== State.QUOTES || data[i + 1] === '"') &&
+      char === '\\' &&
+      (escaped = !escaped)
+    ) {
+      i++;
+      continue;
+    }
 
-    if (state === 0 && /\s/.test(char)) {
-    } else if (char === '"' && state === 0) state = 1;
-    else if (char === '"' && !escaped && state === 1) state = 0;
-    else if (char === ',' && state !== 1) {
+    if (state === State.NONE && char.trim() === '') {
+      // ignore whitespaces
+    } else if (state === State.NONE && char === '"') {
+      state = State.QUOTES;
+    } else if (state === State.QUOTES && char === '"') {
+      if (escaped) {
+        escaped = false;
+        tmp += '"';
+      } else {
+        state = State.NONE;
+      }
+    } else if (state !== State.QUOTES && char === ',') {
       items.push(state === 2 ? Number(tmp) : tmp);
       state = 0;
       tmp = '';
     } else if (state === 0) {
       state = 2;
       tmp = char;
-    } else tmp += char;
+    } else {
+      if (state === State.NUMBER && char === '"') {
+        throw new Error(`Unexpected token " in position ${row}:${i}.`);
+      }
+      tmp += char;
+    }
 
-    escaped = false;
+    if (escaped) {
+      throw new Error(`Unexpected token \\ in position ${row}:${i - 1}.`);
+    }
+    i++;
   }
 
   if (tmp) items.push(state === 2 ? Number(tmp) : tmp);
   return items;
 }
+
 
 // Parse the CSV file.
 const rawData = readFileSync(process.argv[2], 'utf8')
