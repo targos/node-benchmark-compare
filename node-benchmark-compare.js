@@ -16,7 +16,7 @@ function parseCsvLine(data) {
   let tmp = '';
   const items = [];
 
-  for (const char of text) {
+  for (const char of data) {
     if (char === '\\' && (escaped = !escaped)) continue;
 
     if (state === 0 && /\s/.test(char)) {
