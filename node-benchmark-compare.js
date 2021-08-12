@@ -12,7 +12,7 @@ if (process.argv.length !== 3) {
 
 const State = {
   NONE: 0,
-  QUOTES: 1,
+  STRING: 1,
   NUMBER: 2,
 }
 
@@ -26,51 +26,44 @@ function parseCsvLine(data, row) {
   for (const char of data) {
     if (
       char === '\\' &&
-      (state !== State.QUOTES || data[i + 1] === '"') &&
+      (state !== State.STRING || data[i + 1] === '"') &&
       (escaped = !escaped)
     ) {
       i++;
       continue;
     }
 
-    if (state !== State.QUOTES && char.trim() === '') {
-      if (state === State.NUMBER) {
-        throw new Error(`Unexpected token ${char} in position ${row}:${i}.`);
-      }
+    if (state !== State.STRING && char.trim() === '') {
       // ignore whitespaces
     } else if (state === State.NONE && char === '"') {
-      state = State.QUOTES;
-    } else if (state === State.QUOTES && char === '"') {
+      state = State.STRING;
+    } else if (state === State.STRING && char === '"') {
       if (escaped) {
-        escaped = false;
         tmp += '"';
       } else {
         state = State.NONE;
       }
-    } else if (state !== State.QUOTES && char === ',') {
-      items.push(state === 2 ? Number(tmp) : tmp);
-      state = 0;
+    } else if (state !== State.STRING && char === ',') {
+      items.push(state === State.NUMBER ? Number(tmp) : tmp);
+      state = State.NONE;
       tmp = '';
-    } else if (state === 0) {
-      state = 2;
+    } else if (state === State.NONE) {
+      state = State.NUMBER;
       tmp = char;
     } else {
-      if (state === State.NUMBER && char === '"') {
-        throw new Error(`Unexpected token " in position ${row}:${i}.`);
-      }
       tmp += char;
     }
 
-    if (escaped) {
-      throw new Error(`Unexpected token \\ in position ${row}:${i - 1}.`);
-    }
+    escaped = false;
     i++;
   }
 
-  if (tmp) items.push(state === 2 ? Number(tmp) : tmp);
+  if (tmp) {
+    items.push(state === State.NUMBER ? Number(tmp) : tmp);
+  }
+
   return items;
 }
-
 
 // Parse the CSV file.
 const rawData = readFileSync(process.argv[2], 'utf8')
