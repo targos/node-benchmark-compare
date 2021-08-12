@@ -10,11 +10,39 @@ if (process.argv.length !== 3) {
   process.exit(1);
 }
 
+function parseCsvLine(data) {
+  let state = 0;
+  let escape = false;
+  let tmp = '';
+  let items = [];
+
+  for (const char of data) {
+    if (char === '\\' && (escape = !escape)) continue;
+
+    if (state === 0 && /\s/.test(char)) {
+    } else if (char === '"' && !escape && state === 0) state = 1;
+    else if (char === '"' && !escape && state === 1) state = 0;
+    else if (char === ',' && state !== 1) {
+      items.push(state === 2 ? Number(tmp) : tmp);
+      state = 0;
+      tmp = '';
+    } else if (state === 0) {
+      state = 2;
+      tmp = char;
+    } else tmp += char;
+
+    escape = false;
+  }
+
+  if (tmp) items.push(state === 2 ? Number(tmp) : tmp);
+  return items;
+}
+
 // Parse the CSV file.
 const rawData = readFileSync(process.argv[2], 'utf8')
   .split('\n')
   .filter((line) => line.trim() !== '')
-  .map((line) => JSON.parse(`[${line.replace(/\n/g, '\\n').replace(/\r/, '\\r')}]`));
+  .map(parseCsvLine);
 
 // Transform the data into objects.
 const [headers] = rawData;
