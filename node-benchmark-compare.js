@@ -12,16 +12,16 @@ if (process.argv.length !== 3) {
 
 function parseCsvLine(data) {
   let state = 0;
-  let escape = false;
+  let escaped = false;
   let tmp = '';
-  let items = [];
+  const items = [];
 
-  for (const char of data) {
-    if (char === '\\' && (escape = !escape)) continue;
+  for (const char of text) {
+    if (char === '\\' && (escaped = !escaped)) continue;
 
     if (state === 0 && /\s/.test(char)) {
-    } else if (char === '"' && !escape && state === 0) state = 1;
-    else if (char === '"' && !escape && state === 1) state = 0;
+    } else if (char === '"' && state === 0) state = 1;
+    else if (char === '"' && !escaped && state === 1) state = 0;
     else if (char === ',' && state !== 1) {
       items.push(state === 2 ? Number(tmp) : tmp);
       state = 0;
@@ -31,7 +31,7 @@ function parseCsvLine(data) {
       tmp = char;
     } else tmp += char;
 
-    escape = false;
+    escaped = false;
   }
 
   if (tmp) items.push(state === 2 ? Number(tmp) : tmp);
