@@ -33,7 +33,10 @@ function parseCsvLine(data, row) {
       continue;
     }
 
-    if (state === State.NONE && char.trim() === '') {
+    if (state !== State.QUOTES && char.trim() === '') {
+      if (state === State.NUMBER) {
+        throw new Error(`Unexpected token ${char} in position ${row}:${i}.`);
+      }
       // ignore whitespaces
     } else if (state === State.NONE && char === '"') {
       state = State.QUOTES;
