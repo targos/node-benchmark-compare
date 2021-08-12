@@ -25,8 +25,8 @@ function parseCsvLine(data, row) {
   let i = 0;
   for (const char of data) {
     if (
-      (state !== State.QUOTES || data[i + 1] === '"') &&
       char === '\\' &&
+      (state !== State.QUOTES || data[i + 1] === '"') &&
       (escaped = !escaped)
     ) {
       i++;
