@@ -1,14 +1,11 @@
 import Summary from 'summary';
 import ttest from 'ttest';
 
-import { parseCsvLine } from './parseCsvLine.js';
+import { parseCsv } from './csv-parser.js';
 
 export function analyseCsv(contents) {
   // Parse the CSV file.
-  const rawData = contents
-    .split('\n')
-    .filter((line) => line.trim() !== '')
-    .map(parseCsvLine);
+  const rawData = parseCsv(contents);
 
   // Transform the data into objects.
   const [headers] = rawData;
