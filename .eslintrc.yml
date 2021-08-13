@@ -1,0 +1,6 @@
+extends: cheminfo
+parserOptions:
+  sourceType: module
+rules:
+  no-console: off
+  'import/no-unresolved': off

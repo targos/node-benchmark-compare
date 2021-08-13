@@ -3,12 +3,26 @@
   "version": "1.0.0",
   "description": "JavaScript version of the benchmark/compare.R Node.js script",
   "type": "module",
-  "bin": "node-benchmark-compare.js",
+  "bin": "./bin/node-benchmark-compare.js",
+  "exports": "./src/node-benchmark-compare.js",
   "files": [
-    "node-benchmark-compare.js"
+    "bin",
+    "src"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "eslint": "eslint .",
+    "prettier": "prettier --check .",
+    "prettier-write": "prettier --write .",
+    "test": "npm run eslint && npm run prettier && npm run test-only",
+    "test-only": "tap --no-check-coverage",
+    "snap": "tap"
+  },
+  "tap": {
+    "node-arg": [
+      "--no-warnings",
+      "--experimental-loader",
+      "@istanbuljs/esm-loader-hook"
+    ]
   },
   "repository": {
     "type": "git",
@@ -20,7 +34,11 @@
   },
   "homepage": "https://github.com/targos/node-benchmark-compare#readme",
   "devDependencies": {
-    "prettier": "^2.3.0"
+    "@istanbuljs/esm-loader-hook": "^0.1.2",
+    "eslint": "^7.32.0",
+    "eslint-config-cheminfo": "^5.2.4",
+    "prettier": "^2.3.2",
+    "tap": "^15.0.9"
   },
   "dependencies": {
     "summary": "^2.1.0",
