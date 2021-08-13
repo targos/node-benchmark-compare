@@ -1,6 +1,6 @@
 {
   "name": "node-benchmark-compare",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "JavaScript version of the benchmark/compare.R Node.js script",
   "type": "module",
   "bin": "./bin/node-benchmark-compare.js",
