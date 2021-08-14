@@ -38,6 +38,6 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Run tests
-        run: npm run test-only
+        run: npm run test-only && npm run test-coverage
       - name: Send coverage report to Codecov
         uses: codecov/codecov-action@v2
