@@ -16,3 +16,13 @@ tap.test('http', (t) => {
   t.plan(1);
   t.matchSnapshot(analyseFixture('http.csv'));
 });
+
+tap.test('insufficient', (t) => {
+  t.plan(1);
+  t.matchSnapshot(analyseFixture('insufficient.csv'));
+});
+
+tap.test('confidence', (t) => {
+  t.plan(1);
+  t.matchSnapshot(analyseFixture('confidence.csv'));
+});
