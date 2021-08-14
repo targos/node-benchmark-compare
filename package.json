@@ -16,7 +16,7 @@
     "test": "npm run eslint && npm run prettier && npm run test-only",
     "test-coverage": "npm run test-only -- --coverage-report=lcov",
     "test-only": "tap",
-    "snap": "tap --snapshot"
+    "snap": "tap"
   },
   "tap": {
     "node-arg": [
