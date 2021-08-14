@@ -27,9 +27,23 @@ tap.test('complex', (t) => {
   t.matchSnapshot(processFixture('complex.csv'));
 });
 
-tap.test('big', (t) => {
+tap.test('parseCsv() should handle correctly big csv', (t) => {
+  t.plan(2);
+  const csv = loadFixture('big.csv');
+  const data = parseCsv(csv);
+  t.equal(data.length, csv.trim().split('\n').length);
+  t.strictSame(
+    data.map((line) => line.length),
+    Array(data.length).fill(5),
+  );
+});
+
+tap.test('parseCsv() should ignore empty or whitespaces lines', (t) => {
   t.plan(1);
-  t.matchSnapshot(processFixture('big.csv'));
+  t.strictSame(parseCsv('1,2,3\n   \n\t\n1,2,3'), [
+    [1, 2, 3],
+    [1, 2, 3],
+  ]);
 });
 
 tap.test('parseCsvLine() should handle correctly invalid numbers', (t) => {
@@ -38,8 +52,9 @@ tap.test('parseCsvLine() should handle correctly invalid numbers', (t) => {
 });
 
 tap.test('parseCsvLine() should remove useless whitespaces', (t) => {
-  t.plan(1);
+  t.plan(2);
   t.strictSame(parseCsvLine('     "a"   ,\t.110,11\t'), ['a', 0.11, 11]);
+  t.strictSame(parseCsvLine('\t   \t  '), []);
 });
 
 tap.test("parseCsvLine() should keep data's whitespaces", (t) => {
