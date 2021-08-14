@@ -1,2 +1,3 @@
 .npmignore
 *.test.js
+_test-common.js

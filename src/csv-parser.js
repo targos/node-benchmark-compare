@@ -52,3 +52,10 @@ export function parseCsvLine(data) {
 
   return items;
 }
+
+export function parseCsv(data) {
+  return data
+    .split('\n')
+    .filter((line) => line.trim() !== '')
+    .map(parseCsvLine);
+}
