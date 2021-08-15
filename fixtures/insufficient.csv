@@ -1,0 +1,5 @@
+"binary","filename","configuration","rate","time"
+"old","http/client-request-body.js","method='write' len=32 type='asc' dur=5",0,4.999736176
+"new","http/client-request-body.js","method='write' len=32 type='asc' dur=5",1,4.999037323
+"old","http/something.js","method='write' len=32 type='asc' dur=5",0,4.999736176
+"new","http/something.js","method='write' len=32 type='asc' dur=5",0,4.999037323

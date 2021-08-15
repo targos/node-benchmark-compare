@@ -5,6 +5,19 @@
  * Make sure to inspect the output below.  Do not ignore changes!
  */
 'use strict'
+exports[`src/node-benchmark-compare.test.js TAP confidence > must match snapshot 1`] = `
+                                                        confidence improvement accuracy (*)    (**)   (***)
+util/format.js type='string-2' n=100000                          *      7.40 %       ±7.22%  ±9.61% ±12.51%
+util/format.js type='string' n=100000                          ***     14.47 %       ±7.27%  ±9.68% ±12.63%
+util/inspect.js option='colors' method='Number' n=20000         **     17.97 %      ±12.02% ±17.25% ±25.33%
+
+Be aware that when doing many comparisons the risk of a false-positive result increases.
+In this case, there are 3 comparisons, you can thus expect the following amount of false-positive results:
+  0.15 false positives, when considering a   5% risk acceptance (*, **, ***),
+  0.03 false positives, when considering a   1% risk acceptance (**, ***),
+  0.00 false positives, when considering a 0.1% risk acceptance (***)
+`
+
 exports[`src/node-benchmark-compare.test.js TAP http > must match snapshot 1`] = `
                                                                                                               confidence improvement accuracy (*)      (**)      (***)
 http/client-request-body.js method='end' len=1024 type='asc' dur=5                                                            2.72 %      ±39.08%  ±129.37%   ±708.99%
@@ -121,6 +134,18 @@ In this case, there are 108 comparisons, you can thus expect the following amoun
   5.40 false positives, when considering a   5% risk acceptance (*, **, ***),
   1.08 false positives, when considering a   1% risk acceptance (**, ***),
   0.11 false positives, when considering a 0.1% risk acceptance (***)
+`
+
+exports[`src/node-benchmark-compare.test.js TAP insufficient > must match snapshot 1`] = `
+                                                                   confidence improvement accuracy (*) (**) (***)
+http/client-request-body.js method='write' len=32 type='asc' dur=5         NA  Infinity %           NA   NA    NA
+http/something.js method='write' len=32 type='asc' dur=5                   NA       NaN %           NA   NA    NA
+
+Be aware that when doing many comparisons the risk of a false-positive result increases.
+In this case, there are 2 comparisons, you can thus expect the following amount of false-positive results:
+  0.10 false positives, when considering a   5% risk acceptance (*, **, ***),
+  0.02 false positives, when considering a   1% risk acceptance (**, ***),
+  0.00 false positives, when considering a 0.1% risk acceptance (***)
 `
 
 exports[`src/node-benchmark-compare.test.js TAP path-dirname-posix > must match snapshot 1`] = `

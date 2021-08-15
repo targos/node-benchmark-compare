@@ -1,0 +1,135 @@
+"binary","filename","configuration","rate","time"
+"old","util/format.js","type='string' n=100000",3300414.994181368,0.030299220
+"old","util/format.js","type='string-2' n=100000",2955263.6037506904,0.033837929
+"new","util/format.js","type='string' n=100000",3356386.5625587157,0.029793946
+"new","util/format.js","type='string-2' n=100000",3568733.922407588,0.028021142
+"old","util/format.js","type='string' n=100000",3968176.0219392516,0.025200495
+"old","util/format.js","type='string-2' n=100000",3032778.512788499,0.032973064
+"new","util/format.js","type='string' n=100000",4617229.162918054,0.021658011
+"new","util/format.js","type='string-2' n=100000",2280665.8559051594,0.043846844
+"old","util/format.js","type='string' n=100000",3846015.3895998206,0.026000936
+"old","util/format.js","type='string-2' n=100000",2371710.0527539467,0.042163670
+"new","util/format.js","type='string' n=100000",4426018.633804009,0.022593669
+"new","util/format.js","type='string-2' n=100000",3653590.381441047,0.027370337
+"old","util/format.js","type='string' n=100000",2868828.085735157,0.034857439
+"old","util/format.js","type='string-2' n=100000",3382202.6669276827,0.029566531
+"new","util/format.js","type='string' n=100000",4637910.0167539865,0.021561436
+"new","util/format.js","type='string-2' n=100000",2757737.9852732928,0.036261603
+"old","util/format.js","type='string' n=100000",3679932.5659717154,0.027174411
+"old","util/format.js","type='string-2' n=100000",2953888.093603751,0.033853686
+"new","util/format.js","type='string' n=100000",4540048.791904367,0.022026195
+"new","util/format.js","type='string-2' n=100000",3074065.9926961423,0.032530206
+"old","util/format.js","type='string' n=100000",3617481.30476618,0.027643543
+"old","util/format.js","type='string-2' n=100000",3493880.6427482585,0.028621470
+"new","util/format.js","type='string' n=100000",4630371.989731502,0.021596537
+"new","util/format.js","type='string-2' n=100000",2709799.668033282,0.036903097
+"old","util/format.js","type='string' n=100000",3590293.641141175,0.027852875
+"old","util/format.js","type='string-2' n=100000",2905271.1642104294,0.034420195
+"new","util/format.js","type='string' n=100000",4107072.5308598243,0.024348243
+"new","util/format.js","type='string-2' n=100000",3400680.870721212,0.029405876
+"old","util/format.js","type='string' n=100000",3448999.557320907,0.028993915
+"old","util/format.js","type='string-2' n=100000",3462902.805287174,0.028877507
+"new","util/format.js","type='string' n=100000",4869028.4895621175,0.020537978
+"new","util/format.js","type='string-2' n=100000",2692465.0772470925,0.037140686
+"old","util/format.js","type='string' n=100000",3456044.3346896926,0.028934814
+"old","util/format.js","type='string-2' n=100000",2618383.3975221296,0.038191504
+"new","util/format.js","type='string' n=100000",4478718.7854574565,0.022327814
+"new","util/format.js","type='string-2' n=100000",3668635.3542280216,0.027258092
+"old","util/format.js","type='string' n=100000",3885197.541120639,0.025738717
+"old","util/format.js","type='string-2' n=100000",3170817.92262976,0.031537604
+"new","util/format.js","type='string' n=100000",3202031.5737604145,0.031230173
+"new","util/format.js","type='string-2' n=100000",3137460.522510793,0.031872911
+"old","util/format.js","type='string' n=100000",3517600.7374016778,0.028428468
+"old","util/format.js","type='string-2' n=100000",3431147.6911103805,0.029144767
+"new","util/format.js","type='string' n=100000",4683805.867675271,0.021350159
+"new","util/format.js","type='string-2' n=100000",3544767.991567422,0.028210591
+"old","util/format.js","type='string' n=100000",3960536.10925725,0.025249107
+"old","util/format.js","type='string-2' n=100000",3222950.605478004,0.031027469
+"new","util/format.js","type='string' n=100000",3841073.8782162946,0.026034386
+"new","util/format.js","type='string-2' n=100000",3363579.3112156466,0.029730234
+"old","util/format.js","type='string' n=100000",3295903.0804103455,0.030340698
+"old","util/format.js","type='string-2' n=100000",3096480.7350748,0.032294727
+"new","util/format.js","type='string' n=100000",2721833.4400700317,0.036739941
+"new","util/format.js","type='string-2' n=100000",3205682.3155361437,0.031194607
+"old","util/format.js","type='string' n=100000",3864314.1906930082,0.025877813
+"old","util/format.js","type='string-2' n=100000",3371390.2608761555,0.029661354
+"new","util/format.js","type='string' n=100000",4587580.41971131,0.021797983
+"new","util/format.js","type='string-2' n=100000",3265007.7140704757,0.030627799
+"old","util/format.js","type='string' n=100000",4143520.4435290582,0.024134067
+"old","util/format.js","type='string-2' n=100000",2832330.1078474834,0.035306619
+"new","util/format.js","type='string' n=100000",4653762.837172098,0.021487988
+"new","util/format.js","type='string-2' n=100000",3093701.313842355,0.032323741
+"old","util/format.js","type='string' n=100000",3353125.716730622,0.029822920
+"old","util/format.js","type='string-2' n=100000",2699680.082510862,0.037041426
+"new","util/format.js","type='string' n=100000",3585075.6741358372,0.027893414
+"new","util/format.js","type='string-2' n=100000",3546952.0686179157,0.028193220
+"old","util/format.js","type='string' n=100000",2872625.4877718077,0.034811360
+"old","util/format.js","type='string-2' n=100000",3512865.2189844646,0.028466791
+"new","util/format.js","type='string' n=100000",3840839.748912015,0.026035973
+"new","util/format.js","type='string-2' n=100000",3622381.769624778,0.027606146
+"old","util/format.js","type='string' n=100000",3584710.8211988183,0.027896253
+"old","util/format.js","type='string-2' n=100000",2201083.650709419,0.045432167
+"new","util/format.js","type='string' n=100000",4600961.803459242,0.021734586
+"new","util/format.js","type='string-2' n=100000",2362047.5087591214,0.042336151
+"old","util/format.js","type='string' n=100000",3646157.74642074,0.027426131
+"old","util/format.js","type='string-2' n=100000",2501169.5468801213,0.039981296
+"new","util/format.js","type='string' n=100000",3556115.9362072633,0.028120568
+"new","util/format.js","type='string-2' n=100000",3777180.639093676,0.026474773
+"old","util/format.js","type='string' n=100000",3973402.046699394,0.025167350
+"old","util/format.js","type='string-2' n=100000",2199488.746436801,0.045465111
+"new","util/format.js","type='string' n=100000",4215420.64101794,0.023722425
+"new","util/format.js","type='string-2' n=100000",3053892.032701076,0.032745100
+"old","util/format.js","type='string' n=100000",4010585.217776983,0.024934017
+"old","util/format.js","type='string-2' n=100000",3278175.624456397,0.030504772
+"new","util/format.js","type='string' n=100000",3736296.246146898,0.026764473
+"new","util/format.js","type='string-2' n=100000",3104995.7736350023,0.032206163
+"old","util/format.js","type='string' n=100000",3306745.555915844,0.030241214
+"old","util/format.js","type='string-2' n=100000",3494259.2290986255,0.028618369
+"new","util/format.js","type='string' n=100000",3458970.6414678353,0.028910335
+"new","util/format.js","type='string-2' n=100000",3785967.3046135153,0.026413329
+"old","util/format.js","type='string' n=100000",2622890.8973646793,0.038125871
+"old","util/format.js","type='string-2' n=100000",2784118.2978546643,0.035918014
+"new","util/format.js","type='string' n=100000",3459645.569690322,0.028904695
+"new","util/format.js","type='string-2' n=100000",3312474.460821907,0.030188912
+"old","util/format.js","type='string' n=100000",3998006.2742311666,0.025012467
+"old","util/format.js","type='string-2' n=100000",3391221.1390548865,0.029487903
+"new","util/format.js","type='string' n=100000",3038804.038558412,0.032907683
+"new","util/format.js","type='string-2' n=100000",3347014.7021971913,0.029877371
+"old","util/format.js","type='string' n=100000",4008226.484035835,0.024948690
+"old","util/format.js","type='string-2' n=100000",2757918.4665532056,0.036259230
+"new","util/format.js","type='string' n=100000",4524505.877581983,0.022101861
+"new","util/format.js","type='string-2' n=100000",3000451.808033254,0.033328314
+"old","util/format.js","type='string' n=100000",2737961.8797948216,0.036523518
+"old","util/format.js","type='string-2' n=100000",2928995.5534039806,0.034141397
+"new","util/format.js","type='string' n=100000",3824884.3995625707,0.026144581
+"new","util/format.js","type='string-2' n=100000",3594755.711545586,0.027818302
+"old","util/format.js","type='string' n=100000",3683450.5916855605,0.027148457
+"old","util/format.js","type='string-2' n=100000",2637226.0116669293,0.037918631
+"new","util/format.js","type='string' n=100000",4612832.299789816,0.021678655
+"new","util/format.js","type='string-2' n=100000",3585445.4864027896,0.027890537
+"old","util/format.js","type='string' n=100000",3499368.2065671454,0.028576587
+"old","util/format.js","type='string-2' n=100000",3032309.7761576213,0.032978161
+"new","util/format.js","type='string' n=100000",4476780.3282393245,0.022337482
+"new","util/format.js","type='string-2' n=100000",3505063.3268553917,0.028530155
+"old","util/format.js","type='string' n=100000",3667438.9804167557,0.027266984
+"old","util/format.js","type='string-2' n=100000",3103444.8299681544,0.032222258
+"new","util/format.js","type='string' n=100000",4352794.13908457,0.022973749
+"new","util/format.js","type='string-2' n=100000",2211036.881443915,0.045227649
+"old","util/format.js","type='string' n=100000",4063950.6525851316,0.024606598
+"old","util/format.js","type='string-2' n=100000",3512827.088112242,0.028467100
+"new","util/format.js","type='string' n=100000",4384471.499751444,0.022807766
+"new","util/format.js","type='string-2' n=100000",3791789.789240948,0.026372770
+"old","util/inspect.js","option='colors' method='Number' n=20000",1165462.7242481397,0.017160566
+"old","util/inspect.js","option='colors' method='Number' n=20000",1142397.7683945033,0.017507037
+"old","util/inspect.js","option='colors' method='Number' n=20000",1099146.655511061,0.018195934
+"old","util/inspect.js","option='colors' method='Number' n=20000",1114466.7084554534,0.017945803
+"old","util/inspect.js","option='colors' method='Number' n=20000",1002704.6453752029,0.019946053
+"old","util/inspect.js","option='colors' method='Number' n=20000",976927.416735255,0.020472350
+"old","util/inspect.js","option='colors' method='Number' n=20000",1053894.9771523473,0.018977223
+"new","util/inspect.js","option='colors' method='Number' n=20000",1165371.725028677,0.017161906
+"new","util/inspect.js","option='colors' method='Number' n=20000",1406243.1994957775,0.014222291
+"new","util/inspect.js","option='colors' method='Number' n=20000",1208121.0136159468,0.016554633
+"new","util/inspect.js","option='colors' method='Number' n=20000",1062686.212512482,0.018820231
+"new","util/inspect.js","option='colors' method='Number' n=20000",1424532.7763979991,0.014039691
+"new","util/inspect.js","option='colors' method='Number' n=20000",1359598.2332836718,0.014710228
+"new","util/inspect.js","option='colors' method='Number' n=20000",1286340.2372500207,0.015547986

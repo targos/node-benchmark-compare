@@ -15,7 +15,7 @@
     "prettier-write": "prettier --write .",
     "test": "npm run eslint && npm run prettier && npm run test-only",
     "test-coverage": "npm run test-only -- --coverage-report=lcov",
-    "test-only": "tap --no-check-coverage",
+    "test-only": "tap",
     "snap": "tap"
   },
   "tap": {
